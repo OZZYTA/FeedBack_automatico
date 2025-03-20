@@ -34,9 +34,10 @@ def systemMsgBuild(historias, esquema_salida, archivos, nombre_repo):
         - **Se indulgente y trata de encontrar todos los criterios solicitados en las historias en el codigo.**
 
         **Reglas clave**
-        **Solo responde con JSON.**  
+        **Solo responde con JSON que corresponda al esquema: {json.dumps(esquema_salida, ensure_ascii=False, indent=2)}.**  
         **Para cada historia, proporciona una calificación indicando cuántos criterios cumple, por ejemplo, `3/5`.**  
         **Si un criterio no se encuentra en el código, no uses "No evaluable", sino que indiques que no se encontró.**  
+
 
         **Ejemplo de salida esperada**
         ```json

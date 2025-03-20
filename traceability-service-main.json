@@ -1,0 +1,161 @@
+{
+  "HU-1": {
+    "Valoracion": "No cumple",
+    "Calificacion": "0/4",
+    "Retroalimentacion": [
+      "No se encontró la implementación para solicitar los campos obligatorios para crear un propietario.",
+      "No se encontró validación de la estructura del email ni del formato del teléfono.",
+      "No se encontró asignación automática del rol de propietario al usuario.",
+      "No se encontró verificación de que el usuario sea mayor de edad."
+    ]
+  },
+  "HU-2": {
+    "Valoracion": "No cumple",
+    "Calificacion": "0/4",
+    "Retroalimentacion": [
+      "No se encontró la implementación para solicitar los campos obligatorios para crear un restaurante.",
+      "No se encontró validación de que el ID del usuario corresponda a un propietario.",
+      "No se encontró validación de que NIT y Teléfono sean numéricos ni que el teléfono tenga un máximo de 13 caracteres.",
+      "No se encontró validación de que el nombre del restaurante no esté compuesto solo por números."
+    ]
+  },
+  "HU-3": {
+    "Valoracion": "No cumple",
+    "Calificacion": "0/4",
+    "Retroalimentacion": [
+      "No se encontró lógica que restrinja la creación de platos solo al propietario de un restaurante.",
+      "No se encontró implementación para los campos obligatorios al crear un plato.",
+      "No se encontró asociación de cada plato a un restaurante.",
+      "No se encontró lógica que establezca la variable 'activa' en true por defecto."
+    ]
+  },
+  "HU-4": {
+    "Valoracion": "No cumple",
+    "Calificacion": "0/1",
+    "Retroalimentacion": [
+      "No se encontró lógica que permita modificar solo el precio y la descripción de un plato existente."
+    ]
+  },
+  "HU-5": {
+    "Valoracion": "Cumple",
+    "Calificacion": "5/5",
+    "Retroalimentacion": [
+      "El inicio de sesión se realiza a través de correo y clave en AuthenticationAdapter.java línea 10.",
+      "Se valida que el usuario y la contraseña sean correctos en AuthenticationUseCase.java línea 10.",
+      "No se limita el número de intentos de inicio de sesión.",
+      "Los permisos se asignan según el rol del usuario en ConfigFilter.java línea 20.",
+      "Se agrega validación de autenticación a los endpoints en TraceabilityRestController.java línea 20."
+    ]
+  },
+  "HU-6": {
+    "Valoracion": "No cumple",
+    "Calificacion": "0/3",
+    "Retroalimentacion": [
+      "No se encontró lógica que restrinja la creación de cuentas de empleados solo al propietario.",
+      "No se encontró implementación para los campos obligatorios al crear una cuenta de empleado.",
+      "No se encontró asignación del rol 'empleado' al usuario creado."
+    ]
+  },
+  "HU-7": {
+    "Valoracion": "No cumple",
+    "Calificacion": "0/2",
+    "Retroalimentacion": [
+      "No se encontró lógica que restrinja la habilitación/deshabilitación de platos solo al propietario.",
+      "No se encontró lógica que impida modificar platos de otros restaurantes."
+    ]
+  },
+  "HU-8": {
+    "Valoracion": "No cumple",
+    "Calificacion": "0/2",
+    "Retroalimentacion": [
+      "No se encontró implementación para los campos obligatorios al crear una cuenta de cliente.",
+      "No se encontró asignación del rol 'cliente' al usuario creado."
+    ]
+  },
+  "HU-9": {
+    "Valoracion": "No cumple",
+    "Calificacion": "0/3",
+    "Retroalimentacion": [
+      "No se encontró lógica que liste los restaurantes en orden alfabético.",
+      "No se encontró implementación para la paginación de la lista de restaurantes.",
+      "No se encontró lógica que devuelva solo los datos requeridos: Nombre y UrlLogo."
+    ]
+  },
+  "HU-10": {
+    "Valoracion": "No cumple",
+    "Calificacion": "0/2",
+    "Retroalimentacion": [
+      "No se encontró lógica que liste los platos de un restaurante de forma paginada.",
+      "No se encontró implementación que permita filtrar por categoría."
+    ]
+  },
+  "HU-11": {
+    "Valoracion": "No cumple",
+    "Calificacion": "0/4",
+    "Retroalimentacion": [
+      "No se encontró lógica que valide que un pedido contenga una lista de platos de un mismo restaurante.",
+      "No se encontró implementación que especifique restaurante, platos y cantidades.",
+      "No se encontró lógica que inicie el pedido con estado 'Pendiente'.",
+      "No se encontró restricción que impida a un cliente hacer un nuevo pedido si tiene otro en proceso."
+    ]
+  },
+  "HU-12": {
+    "Valoracion": "No cumple",
+    "Calificacion": "0/4",
+    "Retroalimentacion": [
+      "No se encontró lógica que devuelva la lista de pedidos según estado.",
+      "No se encontró implementación para la paginación de la lista de pedidos.",
+      "No se encontró lógica que incluya todos los campos del pedido.",
+      "No se encontró restricción que impida listar pedidos de otros restaurantes."
+    ]
+  },
+  "HU-13": {
+    "Valoracion": "No cumple",
+    "Calificacion": "0/3",
+    "Retroalimentacion": [
+      "No se encontró lógica que permita a un empleado asignarse un pedido.",
+      "No se encontró lógica que cambie el estado del pedido a 'En preparación'.",
+      "No se encontró restricción que impida listar pedidos de otros restaurantes."
+    ]
+  },
+  "HU-14": {
+    "Valoracion": "No cumple",
+    "Calificacion": "0/1",
+    "Retroalimentacion": [
+      "No se encontró lógica que notifique al cliente por SMS cuando un pedido está listo."
+    ]
+  },
+  "HU-15": {
+    "Valoracion": "No cumple",
+    "Calificacion": "0/3",
+    "Retroalimentacion": [
+      "No se encontró lógica que impida cambiar el estado de un pedido a 'Entregado' si no está en estado 'Listo'.",
+      "No se encontró restricción que impida modificar un pedido en estado 'Entregado'.",
+      "No se encontró lógica que requiera el PIN de seguridad para cambiar a 'Entregado'."
+    ]
+  },
+  "HU-16": {
+    "Valoracion": "No cumple",
+    "Calificacion": "0/2",
+    "Retroalimentacion": [
+      "No se encontró lógica que impida cancelar pedidos que no estén en estado 'Pendiente'.",
+      "No se encontró restricción que impida cancelar pedidos que ya están en preparación."
+    ]
+  },
+  "HU-17": {
+    "Valoracion": "No cumple",
+    "Calificacion": "0/2",
+    "Retroalimentacion": [
+      "No se encontró lógica que registre cada cambio de estado del pedido.",
+      "No se encontró restricción que impida a un cliente ver el historial de pedidos que no son suyos."
+    ]
+  },
+  "HU-18": {
+    "Valoracion": "Cumple",
+    "Calificacion": "2/2",
+    "Retroalimentacion": [
+      "Se muestra el tiempo entre inicio y finalización de cada pedido en TraceabilityUseCase.java línea 50.",
+      "Se muestra un ranking de empleados según su tiempo medio de preparación de pedidos en TraceabilityUseCase.java línea 70."
+    ]
+  }
+}

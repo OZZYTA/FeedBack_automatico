@@ -1,0 +1,162 @@
+{
+  "HU-1": {
+    "Valoracion": "No cumple",
+    "Calificacion": "0/4",
+    "Retroalimentacion": [
+      "No se encontró la implementación para solicitar los campos obligatorios: Nombre, Apellido, DocumentoDeIdentidad, celular, fechaNacimiento, correo y clave.",
+      "No se encontró validación de la estructura del email ni del formato del teléfono.",
+      "No se encontró lógica para asignar automáticamente el rol de propietario al usuario.",
+      "No se encontró verificación de que el usuario sea mayor de edad."
+    ]
+  },
+  "HU-2": {
+    "Valoracion": "No cumple",
+    "Calificacion": "0/4",
+    "Retroalimentacion": [
+      "No se encontró la implementación para solicitar los campos obligatorios: Nombre, NIT, Dirección, Teléfono, URL del logo, y el ID del propietario.",
+      "No se encontró validación de que el ID del usuario corresponda a un propietario.",
+      "No se encontró validación de que NIT y Teléfono sean numéricos ni que el teléfono tenga un máximo de 13 caracteres.",
+      "No se encontró lógica que impida que el nombre del restaurante esté compuesto solo por números."
+    ]
+  },
+  "HU-3": {
+    "Valoracion": "No cumple",
+    "Calificacion": "0/4",
+    "Retroalimentacion": [
+      "No se encontró lógica que restrinja la creación de platos solo al propietario de un restaurante.",
+      "No se encontró implementación para los campos obligatorios: Nombre del plato, Precio, Descripción, URL de imagen, Categoría.",
+      "No se encontró lógica que asocie cada plato a un restaurante.",
+      "No se encontró lógica que establezca la variable 'activa' en true por defecto."
+    ]
+  },
+  "HU-4": {
+    "Valoracion": "No cumple",
+    "Calificacion": "0/1",
+    "Retroalimentacion": [
+      "No se encontró lógica que permita modificar solo el precio y la descripción de un plato existente."
+    ]
+  },
+  "HU-5": {
+    "Valoracion": "No cumple",
+    "Calificacion": "0/5",
+    "Retroalimentacion": [
+      "No se encontró implementación para el inicio de sesión a través de correo y clave.",
+      "No se encontró validación de usuario y contraseña correctos.",
+      "No se encontró lógica que limite el número de intentos de inicio de sesión.",
+      "No se encontró implementación que restrinja los permisos según el rol del usuario.",
+      "No se encontró validación de autenticación en los endpoints de creación y modificación de usuarios y restaurantes."
+    ]
+  },
+  "HU-6": {
+    "Valoracion": "No cumple",
+    "Calificacion": "0/3",
+    "Retroalimentacion": [
+      "No se encontró lógica que restrinja la creación de cuentas para empleados solo al propietario.",
+      "No se encontró implementación para los campos obligatorios: Nombre, Apellido, DocumentoDeIdentidad, celular, correo, idRol y clave.",
+      "No se encontró lógica que asigne el rol 'empleado' al usuario creado."
+    ]
+  },
+  "HU-7": {
+    "Valoracion": "No cumple",
+    "Calificacion": "0/2",
+    "Retroalimentacion": [
+      "No se encontró lógica que restrinja la habilitación/deshabilitación de platos solo al propietario.",
+      "No se encontró implementación que impida modificar platos de otros restaurantes."
+    ]
+  },
+  "HU-8": {
+    "Valoracion": "No cumple",
+    "Calificacion": "0/2",
+    "Retroalimentacion": [
+      "No se encontró implementación para los campos obligatorios: Nombre, Apellido, DocumentoDeIdentidad, celular, correo, idRol y clave.",
+      "No se encontró lógica que asigne el rol 'cliente' al usuario creado."
+    ]
+  },
+  "HU-9": {
+    "Valoracion": "No cumple",
+    "Calificacion": "0/3",
+    "Retroalimentacion": [
+      "No se encontró lógica que liste los restaurantes en orden alfabético.",
+      "No se encontró implementación para la paginación de la lista de restaurantes.",
+      "No se encontró lógica que devuelva solo los datos: Nombre y UrlLogo."
+    ]
+  },
+  "HU-10": {
+    "Valoracion": "No cumple",
+    "Calificacion": "0/2",
+    "Retroalimentacion": [
+      "No se encontró lógica que liste los platos de un restaurante de forma paginada.",
+      "No se encontró implementación que permita filtrar por categoría."
+    ]
+  },
+  "HU-11": {
+    "Valoracion": "No cumple",
+    "Calificacion": "0/4",
+    "Retroalimentacion": [
+      "No se encontró lógica que permita realizar un pedido con una lista de platos de un mismo restaurante.",
+      "No se encontró implementación que especifique restaurante, platos y cantidades en el pedido.",
+      "No se encontró lógica que inicie el pedido con estado 'Pendiente'.",
+      "No se encontró restricción que impida al cliente hacer un nuevo pedido si tiene otro en proceso."
+    ]
+  },
+  "HU-12": {
+    "Valoracion": "No cumple",
+    "Calificacion": "0/4",
+    "Retroalimentacion": [
+      "No se encontró lógica que devuelva la lista de pedidos según estado.",
+      "No se encontró implementación para la paginación de la lista de pedidos.",
+      "No se encontró lógica que incluya todos los campos del pedido.",
+      "No se encontró restricción que limite la lista de pedidos al restaurante del empleado."
+    ]
+  },
+  "HU-13": {
+    "Valoracion": "No cumple",
+    "Calificacion": "0/3",
+    "Retroalimentacion": [
+      "No se encontró lógica que permita al empleado asignarse un pedido.",
+      "No se encontró implementación que cambie el estado del pedido a 'En preparación'.",
+      "No se encontró restricción que limite la lista de pedidos al restaurante del empleado."
+    ]
+  },
+  "HU-14": {
+    "Valoracion": "Cumple",
+    "Calificacion": "2/2",
+    "Retroalimentacion": [
+      "La notificación al cliente por SMS se realiza correctamente en TwilioAdapter.java línea 15.",
+      "El PIN de seguridad se genera y se envía al cliente en el método notifyClient de MessagingUseCase.java línea 20."
+    ]
+  },
+  "HU-15": {
+    "Valoracion": "No cumple",
+    "Calificacion": "0/3",
+    "Retroalimentacion": [
+      "No se encontró lógica que restrinja la entrega solo a pedidos en estado 'Listo'.",
+      "No se encontró implementación que impida modificar un pedido en estado 'Entregado'.",
+      "No se encontró lógica que requiera el PIN de seguridad para cambiar el estado a 'Entregado'."
+    ]
+  },
+  "HU-16": {
+    "Valoracion": "No cumple",
+    "Calificacion": "0/2",
+    "Retroalimentacion": [
+      "No se encontró lógica que restrinja la cancelación de pedidos solo a aquellos en estado 'Pendiente'.",
+      "No se encontró implementación que impida cancelar un pedido que ya está en preparación."
+    ]
+  },
+  "HU-17": {
+    "Valoracion": "No cumple",
+    "Calificacion": "0/2",
+    "Retroalimentacion": [
+      "No se encontró lógica que registre cada cambio de estado del pedido.",
+      "No se encontró implementación que limite la visualización del historial de pedidos al cliente correspondiente."
+    ]
+  },
+  "HU-18": {
+    "Valoracion": "No cumple",
+    "Calificacion": "0/2",
+    "Retroalimentacion": [
+      "No se encontró lógica que calcule el tiempo entre inicio y finalización de cada pedido.",
+      "No se encontró implementación que muestre un ranking de empleados según su tiempo medio de preparación de pedidos."
+    ]
+  }
+}
