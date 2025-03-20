@@ -1,0 +1,180 @@
+[
+    {
+      "HU": "HU-1",
+      "Descripcion": "Crear Propietario",
+      "Rol": "Administrador",
+      "Criterios": [
+        "Solicitar los siguientes campos obligatorios: Nombre, Apellido, DocumentoDeIdentidad, celular, fechaNacimiento, correo y clave (encriptada con bcrypt).",
+        "Validar estructura de email, formato del teléfono (máximo 13 caracteres, puede contener '+'), y que el documento de identidad sea numérico.",
+        "Asignar automáticamente el rol de propietario al usuario.",
+        "Verificar que el usuario sea mayor de edad."
+      ]
+    },
+    {
+      "HU": "HU-2",
+      "Descripcion": "Crear Restaurante",
+      "Rol": "Administrador",
+      "Criterios": [
+        "Requiere los campos obligatorios: Nombre, NIT, Dirección, Teléfono, URL del logo, y el ID del propietario.",
+        "Validar que el ID del usuario corresponda a un propietario.",
+        "Asegurar que NIT y Teléfono sean numéricos y que el teléfono tenga un máximo de 13 caracteres.",
+        "El nombre del restaurante no puede estar compuesto solo por números."
+      ]
+    },
+    {
+      "HU": "HU-3",
+      "Descripcion": "Crear Plato",
+      "Rol": "Propietario",
+      "Criterios": [
+        "Solo el propietario de un restaurante puede crear platos.",
+        "Campos obligatorios: Nombre del plato, Precio (número positivo mayor a 0), Descripción, URL de imagen, Categoría.",
+        "Cada plato debe estar asociado a un restaurante.",
+        "Por defecto, cada plato recién creado tiene la variable 'activa' en true."
+      ]
+    },
+    {
+      "HU": "HU-4",
+      "Descripcion": "Modificar Plato",
+      "Rol": "Propietario",
+      "Criterios": [
+        "Solo se puede modificar el precio y la descripción de un plato existente."
+      ]
+    },
+    {
+      "HU": "HU-5",
+      "Descripcion": "Agregar Autenticación al Sistema",
+      "Rol": "Administrador / Cliente / Propietario / Empleado",
+      "Criterios": [
+        "El inicio de sesión es a través de correo y clave.",
+        "Se debe validar usuario y contraseña correctos.",
+        "El número de intentos puede ser ilimitado.",
+        "Una vez iniciada la sesión, cada usuario debe tener permisos solo para su rol.",
+        "Agregar validación de autenticación a los endpoints de creación y modificación de usuarios y restaurantes."
+      ]
+    },
+    {
+      "HU": "HU-6",
+      "Descripcion": "Crear cuenta empleado",
+      "Rol": "Propietario",
+      "Criterios": [
+        "Solo el propietario puede crear cuentas para sus empleados.",
+        "Campos obligatorios: Nombre, Apellido, DocumentoDeIdentidad, celular, correo, idRol y clave (encriptada con bcrypt).",
+        "El usuario creado quedará con el rol 'empleado'."
+      ]
+    },
+    {
+      "HU": "HU-7",
+      "Descripcion": "Habilitar/Deshabilitar Plato",
+      "Rol": "Propietario",
+      "Criterios": [
+        "Solo el propietario puede habilitar/deshabilitar platos.",
+        "No se pueden modificar platos de otros restaurantes."
+      ]
+    },
+    {
+      "HU": "HU-8",
+      "Descripcion": "Crear cuenta Cliente",
+      "Rol": "Cliente",
+      "Criterios": [
+        "Campos obligatorios: Nombre, Apellido, DocumentoDeIdentidad, celular, correo, idRol y clave (encriptada con bcrypt).",
+        "El usuario creado quedará con el rol 'cliente'."
+      ]
+    },
+    {
+      "HU": "HU-9",
+      "Descripcion": "Listar los restaurantes",
+      "Rol": "Cliente",
+      "Criterios": [
+        "Los restaurantes deben listarse en orden alfabético.",
+        "La lista debe estar paginada.",
+        "Los datos devueltos deben ser: Nombre, UrlLogo."
+      ]
+    },
+    {
+      "HU": "HU-10",
+      "Descripcion": "Listar los platos de un restaurante",
+      "Rol": "Cliente",
+      "Criterios": [
+        "Los platos deben listarse paginados.",
+        "Debe permitir filtrar por categoría."
+      ]
+    },
+    {
+      "HU": "HU-11",
+      "Descripcion": "Realizar pedido",
+      "Rol": "Cliente",
+      "Criterios": [
+        "Un pedido debe contener una lista de platos de un mismo restaurante.",
+        "Debe especificar restaurante, platos y cantidades.",
+        "El pedido debe iniciar con estado 'Pendiente'.",
+        "El cliente solo puede hacer un nuevo pedido si no tiene otro en proceso."
+      ]
+    },
+    {
+      "HU": "HU-12",
+      "Descripcion": "Obtener lista de pedidos filtrando por estado",
+      "Rol": "Empleado",
+      "Criterios": [
+        "Devolver la lista de pedidos según estado.",
+        "La lista debe estar paginada.",
+        "Debe incluir todos los campos del pedido.",
+        "Solo se pueden listar los pedidos del restaurante del empleado."
+      ]
+    },
+    {
+      "HU": "HU-13",
+      "Descripcion": "Asignarse a un pedido y cambiar estado a 'En preparación'",
+      "Rol": "Empleado",
+      "Criterios": [
+        "El empleado debe poder asignarse un pedido.",
+        "El estado del pedido debe cambiar a 'En preparación'.",
+        "Solo se pueden listar pedidos del restaurante del empleado."
+      ]
+    },
+    {
+      "HU": "HU-14",
+      "Descripcion": "Notificar que el pedido está listo",
+      "Rol": "Empleado",
+      "Criterios": [
+        "Cuando un pedido está listo, se debe notificar al cliente por SMS con un PIN de seguridad."
+      ]
+    },
+    {
+      "HU": "HU-15",
+      "Descripcion": "Entregar pedido (Marcarlo como entregado)",
+      "Rol": "Empleado",
+      "Criterios": [
+        "Solo los pedidos en estado 'Listo' pueden pasar a 'Entregado'.",
+        "Un pedido en 'Entregado' no puede ser modificado.",
+        "Para cambiar a 'Entregado', el empleado debe digitar el PIN de seguridad enviado al cliente."
+      ]
+    },
+    {
+      "HU": "HU-16",
+      "Descripcion": "Cancelar pedido",
+      "Rol": "Cliente",
+      "Criterios": [
+        "Solo se pueden cancelar pedidos en estado 'Pendiente'.",
+        "Si el pedido ya está en preparación, no se puede cancelar."
+      ]
+    },
+    {
+      "HU": "HU-17",
+      "Descripcion": "Consultar trazabilidad del pedido",
+      "Rol": "Cliente",
+      "Criterios": [
+        "Cada cambio de estado del pedido debe quedar registrado.",
+        "El cliente solo puede ver el historial de sus propios pedidos."
+      ]
+    },
+    {
+      "HU": "HU-18",
+      "Descripcion": "Consultar la eficiencia de los pedidos",
+      "Rol": "Propietario",
+      "Criterios": [
+        "Mostrar el tiempo entre inicio y finalización de cada pedido.",
+        "Mostrar un ranking de empleados según su tiempo medio de preparación de pedidos."
+      ]
+    }
+  ]
+  
